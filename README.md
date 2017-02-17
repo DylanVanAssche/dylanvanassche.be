@@ -1,2 +1,2 @@
 # dylanvanassche.be
-My portfolio website dylanvanassche.be
+My portfolio website http://www.dylanvanassche.be
