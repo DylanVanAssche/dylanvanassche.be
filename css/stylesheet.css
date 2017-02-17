@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  font-family: "Montserrat", sans-serif
+}
+
+textarea {
+  min-height: 150px;
+}
+
+hr {
+  width: 200px;
+}
+
+br {
+  line-height: 30px;
+}
+
+.w3-row-padding img {
+  margin-bottom: 12px;
+}
+
+/* Sidebar navigation*/
+.sidebar {
+  width: 120px;
+  background: #222;
+}
+
+/* Make place for our sidebar */
+.content {
+  margin-left: 120px
+}
+
+.secondary_color {
+  background: #222;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.project {
+  height: 100%;
+}
+
+.project_img {
+  width: 85%;
+  max-width: 256px;
+}
+
+.no_link {
+  text-decoration: none;
+}
+
+#avatar {
+  width: 50%;
+  max-width: 350px;
+}
+
+#map {
+  display: none;
+  width: 100%;
+  min-height: 200px;
+}
+
+#email {
+  display: none;
+}
+
+#programming_bar {
+  width: 87.5%;
+}
+
+#diy_bar {
+  width: 82.5%;
+}
+
+#linux_bar {
+  width: 67.5%;
+}
+
+#css_logo {
+  border:0;
+  width:88px;
+  height:31px;
+}
+
+/* No side bar on the smaller screens, so remove the margin*/
+@media only screen and (max-width: 601px) {
+  .content {
+    margin-left: 0px;
+  }
+}
