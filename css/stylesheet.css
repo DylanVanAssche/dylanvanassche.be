@@ -85,6 +85,10 @@ br {
   height:31px;
 }
 
+#forced {
+  background: #222;
+  background-color: #222;
+}
 /* No side bar on the smaller screens, so remove the margin*/
 @media only screen and (max-width: 601px) {
   .content {
