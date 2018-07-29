@@ -3,9 +3,21 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio: my projects">
-    <meta name="keywords" content="Dylan Van Assche, Dylan, Van Assche, portfolio, who, industrial engineering, electronics, ICT, Arduino, 3D printing, IOT">
+    <meta name="description" content="Portfolio: my projects and skills">
+    <meta name="keywords" content="Dylan Van Assche, Dylan, Van Assche, portfolio, who, industrial engineering, electronics, ICT, Arduino, 3D printing, IoT, Linked Open Data, Campus De Nayer">
     <meta name="author" content="Dylan Van Assche">
+    <meta name="dct:creator" resource="https://dylanvanassche.be/#me"/>
+    <meta property="og:title" content="Home – Dylan Van Assche" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dylanvanassche.be" />
+    <meta property="og:image" content="https://dylanvanassche.be/images/avatar.png" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@DylanVanAssche"/>
+    <meta name="twitter:title" content="Home – Dylan Van Assche"/>
+    <meta name="twitter:description" content="Portfolio: my projects and skills"/>
+    <meta name="twitter:image" content="https://dylanvanassche.be/images/avatar.png" />
+    <meta name="twitter:url" content="https://dylanvanassche.be/" />
     <script src="js/html5.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,149 +26,189 @@
     <title>Dylan Van Assche</title>
 
   </head>
-<body class="w3-red">
+  <body class="w3-red">
+  <!-- JSON-LD snippet about me -->
+  <script type="application/ld+json">
+    {
+    "@context": {
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "knows": {
+        "@type": "@id",
+        "@id": "http://xmlns.com/foaf/0.1/knows"
+      },
+      "img": {
+        "@id": "foaf:img",
+        "@type": "@id"
+      }
+    },
+    "@graph": [{
+      "@id": "http://w3id.org/people/dylanvanassche/#me",
+      "@type": "foaf:Person",
+      "foaf:name": "Dylan Van Assche",
+      "img": "https://dylanvanassche.be/images/avatar.png",
+      "foaf:mbox": ["mailto:dylan.vanassche@student.kuleuven.be", "mailto:dylanvanassche@protonmail.com"],
+      "knows": [
+        "https://pietercolpaert.be/#me",
+        "http://w3id.org/people/brechtvdv"
+      ]
+      }, {
+        "@context": "http://schema.org",
+        "@id": "http://w3id.org/people/dylanvanassche/#me",
+        "@type": "Person",
+        "colleague": [
+          "https://pietercolpaert.be/#me",
+          "http://w3id.org/people/brechtvdv"
+        ],
+        "email": ["mailto:dylan.vanassche@student.kuleuven.be", "mailto:dylanvanassche@protonmail.com"],
+        "image": "https://dylanvanassche.be/images/avatar.png",
+        "name": "Dylan Van Assche",
+        "url": "https://www.dylanvanassche.be"
+      }]
+    }
+  </script>
 
-<!-- Icon Bar (Sidenav - hidden on small screens) -->
-<nav class="w3-sidenav w3-center w3-small w3-hide-small sidebar">
-  <a class="w3-padding-large w3-hover-red" href="#">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a class="w3-padding-large w3-hover-red" href="#about">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>ABOUT</p>
-  </a>
-  <a class="w3-padding-large w3-hover-red" href="#projects">
-    <i class="fa fa-code-fork w3-xxlarge"></i>
-    <p>PROJECTS</p>
-  </a>
-  <a class="w3-padding-large w3-hover-red" href="#contact">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p>
-  </a>
-</nav>
+  <!-- Icon Bar (Sidenav - hidden on small screens) -->
+  <nav class="w3-sidenav w3-center w3-small w3-hide-small sidebar">
+    <a class="w3-padding-large w3-hover-red" href="#">
+      <i class="fa fa-home w3-xxlarge"></i>
+      <p>HOME</p>
+    </a>
+    <a class="w3-padding-large w3-hover-red" href="#about">
+      <i class="fa fa-user w3-xxlarge"></i>
+      <p>ABOUT</p>
+    </a>
+    <a class="w3-padding-large w3-hover-red" href="#projects">
+      <i class="fa fa-code-fork w3-xxlarge"></i>
+      <p>PROJECTS</p>
+    </a>
+    <a class="w3-padding-large w3-hover-red" href="#contact">
+      <i class="fa fa-envelope w3-xxlarge"></i>
+      <p>CONTACT</p>
+    </a>
+  </nav>
 
-<!-- Top menu on small screens -->
-<nav class="w3-top w3-hide-large w3-hide-medium">
-  <div class="w3-bar secondary_color w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button w3-hover-red nav_mobile">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hover-red nav_mobile">ABOUT</a>
-    <a href="#projects" class="w3-bar-item w3-button w3-hover-red nav_mobile">PHOTOS</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hover-red nav_mobile">CONTACT</a>
-  </div>
-</nav>
-
-<!-- Page Content -->
-<div class="w3-padding-large content">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-64 w3-center w3-red" id="home">
-    <img src="images/avatar.png" alt="My avatar" class="w3-padding-32" id="avatar">
-    <h1 class="w3-jumbo">Dylan Van Assche</h1>
-    <p>Student "Industrial Engineering: electronics-ICT" at <a href="https://iiw.kuleuven.be/denayer" target="_blank"> Campus De Nayer, KU Leuven</a></p>
-  </header>
-
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-white w3-padding-64" id="about">
-    <h2 class="w3-text-white">About me</h2>
-    <hr class="w3-opacity">
-    <p>I'm Dylan Van Assche, a student at <a href="https://iiw.kuleuven.be/denayer" target="_blank">Campus De Nayer, KU Leuven</a>. During the day I keep myself busy with programming Sailfish&nbsp;OS applications, Internet Of Things (IOT) and 3D printing.
-      All my projects are open source since  I believe people can help and improve each other by sharing their ideas and tricks. My dream is to work in the research department of a huge company to create some amazing things to make the world a better place!
-    </p>
-
-    <h3 class="w3-padding-16 w3-text-light-grey">Skills</h3>
-    <p class="w3-wide bold">Programming</p>
-    <div class="w3-progress-container">
-      <div class="w3-progressbar secondary_color" id="programming_bar"></div>
+  <!-- Top menu on small screens -->
+  <nav class="w3-top w3-hide-large w3-hide-medium">
+    <div class="w3-bar secondary_color w3-hover-opacity-off w3-center w3-small">
+      <a href="#" class="w3-bar-item w3-button w3-hover-red nav_mobile">HOME</a>
+      <a href="#about" class="w3-bar-item w3-button w3-hover-red nav_mobile">ABOUT</a>
+      <a href="#projects" class="w3-bar-item w3-button w3-hover-red nav_mobile">PHOTOS</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-hover-red nav_mobile">CONTACT</a>
     </div>
-    <p class="w3-wide bold">DIY</p>
-    <div class="w3-progress-container">
-      <div class="w3-progressbar secondary_color" id="diy_bar"></div>
-    </div>
-    <p class="w3-wide bold">Linux</p>
-    <div class="w3-progress-container w3-margin-bottom">
-      <div class="w3-progressbar secondary_color" id="linux_bar"></div>
-    </div>
-    <div class="w3-padding-24">
-    <div class="w3-row w3-center w3-padding-16 w3-section project  secondary_color">
-      <div class="w3-third w3-section">
-        <span class="w3-xlarge">100%</span><br>
-        Open source
+  </nav>
+
+  <!-- Page Content -->
+  <div class="w3-padding-large content">
+    <!-- Header/Home -->
+    <header class="w3-container w3-padding-64 w3-center w3-red" id="home">
+      <img src="images/avatar.png" alt="My avatar" class="w3-padding-32" id="avatar">
+      <h1 class="w3-jumbo">Dylan Van Assche</h1>
+      <p>Student "Industrial Engineering: electronics-ICT" at <a href="https://iiw.kuleuven.be/denayer" target="_blank"> Campus De Nayer, KU Leuven</a></p>
+    </header>
+
+    <!-- About Section -->
+    <div class="w3-content w3-justify w3-text-white w3-padding-64" id="about">
+      <h2 class="w3-text-white">About me</h2>
+      <hr class="w3-opacity">
+      <p>I'm Dylan Van Assche, a student at <a href="https://iiw.kuleuven.be/denayer" target="_blank">Campus De Nayer, KU Leuven</a>. During the day I keep myself busy with programming Sailfish&nbsp;OS applications, Internet Of Things (IOT) and 3D printing.
+        All my projects are open source since  I believe people can help and improve each other by sharing their ideas and tricks. My dream is to work in the research department of a huge company to create some amazing things to make the world a better place!
+      </p>
+
+      <h3 class="w3-padding-16 w3-text-light-grey">Skills</h3>
+      <p class="w3-wide bold">Programming</p>
+      <div class="w3-progress-container">
+        <div class="w3-progressbar secondary_color" id="programming_bar"></div>
       </div>
-      <div class="w3-third w3-section">
-        <span class="w3-xlarge">10+</span><br>
-        Finished projects
+      <p class="w3-wide bold">DIY</p>
+      <div class="w3-progress-container">
+        <div class="w3-progressbar secondary_color" id="diy_bar"></div>
       </div>
-      <div class="w3-third w3-section">
-        <span class="w3-xlarge">2400+</span><br>
-        Happy users
+      <p class="w3-wide bold">Linux</p>
+      <div class="w3-progress-container w3-margin-bottom">
+        <div class="w3-progressbar secondary_color" id="linux_bar"></div>
       </div>
-    </div>
-  </div>
-
-    <div class="w3-center">
-      <a class="w3-btn w3-light-grey w3-padding-large w3-section w3-hover-grey" target="_blank" href="downloads/cv.pdf"><i class="fa fa-download"></i> Download my CV</a>
-    </div>
-  </div>
-
-  <!-- Projects -->
-  <div class="w3-padding-64 w3-content" id="projects">
-    <h2 class="w3-text-white">My projects</h2>
-    <hr class="w3-opacity">
-
-    <!-- Grid -->
-    <div class="w3-row">
-      <div class="w3-col l6 m6 s12 w3-center w3-padding-32 project"><a href="https://sailfinder.dylanvanassche.be" target="_blank" class="no_link"><img src="images/project1.png" alt="Sailfinder app icon" class="w3-round w3-hover-opacity project_img"><br>Sailfinder</a></div>
-      <div class="w3-col l6 m6 s12 w3-center w3-padding-32 project"><a href="https://github.com/dylanvanassche/Trainduino" target="_blank" class="no_link"><img src="images/project2.png" alt="Trainduino" class="w3-round w3-hover-opacity project_img"><br>Trainduino</a></div>
-      <div class="w3-col l6 m6 s12 w3-center w3-padding-32 project"><a href="https://github.com/dylanvanassche/harbour-rgbwifi" target="_blank" class="no_link"><img src="images/project3.png" alt="RGBWiFi app icon" class="w3-round w3-hover-opacity project_img"><br>RGBWiFi</a></div>
-      <div class="w3-col l6 m6 s12 w3-center w3-padding-32 project"><a href="https://www.thingiverse.com/DylanVanAssche/about" target="_blank" class="no_link"><img src="images/project4.png" alt="3D printing" class="w3-round w3-hover-opacity project_img"><br>3D printing</a></div>
-      <div class="w3-col l6 m6 s12 w3-center w3-padding-32 project"><a href="https://github.com/dylanvanassche/harbour-sailbook" target="_blank" class="no_link"><img src="images/project5.png" alt="Sailbook app icon" class="w3-round w3-hover-opacity project_img"><br>Sailbook</a></div>
-      <div class="w3-col l6 m6 s12 w3-center w3-padding-32 project"><a href="https://www.de-pijl.be" target="_blank" class="no_link"><img src="images/project6.png" alt="de-pijl.be icon" class="w3-round w3-hover-opacity project_img"><br>de-pijl.be</a></div>
-      <div class="w3-col l6 m6 s12 w3-center w3-padding-32 project"><a href="https://github.com/iRail/harbour-berail" target="_blank" class="no_link"><img src="images/project7.png" alt="BeRail app icon" class="w3-round w3-hover-opacity project_img"><br>BeRail</a></div>
-      <div class="w3-col l6 m6 s12 w3-center w3-padding-32 project"><a href="https://www.birds.today/" target="_blank" class="no_link"><img src="images/project8.png" alt="#code9000" class="w3-round w3-hover-opacity project_img"><br>#code9000</a></div>
-    </div>
-  </div>
-
-  <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-white" id="contact">
-    <h2 class="w3-text-white">Contact</h2>
-    <hr class="w3-opacity">
-
-    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=4.39830780029297%2C50.91715804697872%2C4.454956054687501%2C50.94028491659529&amp;layer=mapnik&amp;marker=50.92872291908717%2C4.426631927490234" sandbox="allow-scripts" id="map"></iframe>
-
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Vilvoorde, Belgium</p>
-      <p><i class="fa fa-github fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Github: <a href="https://github.com/DylanVanAssche" target="_blank">github.com/DylanVanAssche</a></p>
-      <p><i class="fa fa-twitter fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Twitter: <a href="https://twitter.com/DylanVanAssche" target="_blank">twitter.com/DylanVanAssche</a></p>
-      <p><i class="fa fa-linkedin fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Linkedin: <a href="https://www.linkedin.com/in/DylanVanAssche/" target="_blank">linkedin.com/in/DylanVanAssche/</a></p>
-      <p id="email"><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Email: <script type="text/javascript" src="js/email.js"></script></p>
-        <!--Use Javascript to show the map & my email when Javascript is enabled-->
-      <script>
-        document.getElementById("email").style.display = "block";
-        document.getElementById("map").style.display = "block";
-      </script>
-      <noscript>
-        <div class="w3-panel w3-yellow w3-center">
-          <h3>Javascript deactivated!</h3>
-          <p>Please turn Javascript on to send me an e-mail or to see an interactive map.</p>
+      <div class="w3-padding-24">
+      <div class="w3-row w3-center w3-padding-16 w3-section project  secondary_color">
+        <div class="w3-third w3-section">
+          <span class="w3-xlarge">100%</span><br>
+          Open source
         </div>
-      </noscript>
+        <div class="w3-third w3-section">
+          <span class="w3-xlarge">10+</span><br>
+          Finished projects
+        </div>
+        <div class="w3-third w3-section">
+          <span class="w3-xlarge">2400+</span><br>
+          Happy users
+        </div>
+      </div>
     </div>
-  <!-- End Contact Section -->
+
+      <div class="w3-center">
+        <a class="w3-btn w3-light-grey w3-padding-large w3-section w3-hover-grey" target="_blank" href="downloads/cv.pdf"><i class="fa fa-download"></i> Download my CV</a>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="w3-padding-64 w3-content" id="projects">
+      <h2 class="w3-text-white">My projects</h2>
+      <hr class="w3-opacity">
+
+      <!-- Grid -->
+      <div class="w3-row">
+        <div class="w3-col l6 m6 s12 w3-center w3-padding-32 project"><a href="https://sailfinder.dylanvanassche.be" target="_blank" class="no_link"><img src="images/project1.png" alt="Sailfinder app icon" class="w3-round w3-hover-opacity project_img"><br>Sailfinder</a></div>
+        <div class="w3-col l6 m6 s12 w3-center w3-padding-32 project"><a href="https://github.com/dylanvanassche/Trainduino" target="_blank" class="no_link"><img src="images/project2.png" alt="Trainduino" class="w3-round w3-hover-opacity project_img"><br>Trainduino</a></div>
+        <div class="w3-col l6 m6 s12 w3-center w3-padding-32 project"><a href="https://github.com/dylanvanassche/harbour-rgbwifi" target="_blank" class="no_link"><img src="images/project3.png" alt="RGBWiFi app icon" class="w3-round w3-hover-opacity project_img"><br>RGBWiFi</a></div>
+        <div class="w3-col l6 m6 s12 w3-center w3-padding-32 project"><a href="https://www.thingiverse.com/DylanVanAssche/about" target="_blank" class="no_link"><img src="images/project4.png" alt="3D printing" class="w3-round w3-hover-opacity project_img"><br>3D printing</a></div>
+        <div class="w3-col l6 m6 s12 w3-center w3-padding-32 project"><a href="https://github.com/dylanvanassche/harbour-sailbook" target="_blank" class="no_link"><img src="images/project5.png" alt="Sailbook app icon" class="w3-round w3-hover-opacity project_img"><br>Sailbook</a></div>
+        <div class="w3-col l6 m6 s12 w3-center w3-padding-32 project"><a href="https://www.de-pijl.be" target="_blank" class="no_link"><img src="images/project6.png" alt="de-pijl.be icon" class="w3-round w3-hover-opacity project_img"><br>de-pijl.be</a></div>
+        <div class="w3-col l6 m6 s12 w3-center w3-padding-32 project"><a href="https://github.com/iRail/harbour-berail" target="_blank" class="no_link"><img src="images/project7.png" alt="BeRail app icon" class="w3-round w3-hover-opacity project_img"><br>BeRail</a></div>
+        <div class="w3-col l6 m6 s12 w3-center w3-padding-32 project"><a href="https://www.birds.today/" target="_blank" class="no_link"><img src="images/project8.png" alt="#code9000" class="w3-round w3-hover-opacity project_img"><br>#code9000</a></div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="w3-padding-64 w3-content w3-text-white" id="contact">
+      <h2 class="w3-text-white">Contact</h2>
+      <hr class="w3-opacity">
+
+      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=4.39830780029297%2C50.91715804697872%2C4.454956054687501%2C50.94028491659529&amp;layer=mapnik&amp;marker=50.92872291908717%2C4.426631927490234" sandbox="allow-scripts" id="map"></iframe>
+
+      <div class="w3-section">
+        <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Vilvoorde, Belgium</p>
+        <p><i class="fa fa-github fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Github: <a href="https://github.com/DylanVanAssche" target="_blank">github.com/DylanVanAssche</a></p>
+        <p><i class="fa fa-twitter fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Twitter: <a href="https://twitter.com/DylanVanAssche" target="_blank">twitter.com/DylanVanAssche</a></p>
+        <p><i class="fa fa-linkedin fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Linkedin: <a href="https://www.linkedin.com/in/DylanVanAssche/" target="_blank">linkedin.com/in/DylanVanAssche/</a></p>
+        <p id="email"><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Email: <script type="text/javascript" src="js/email.js"></script></p>
+          <!--Use Javascript to show the map & my email when Javascript is enabled-->
+        <script>
+          document.getElementById("email").style.display = "block";
+          document.getElementById("map").style.display = "block";
+        </script>
+        <noscript>
+          <div class="w3-panel w3-yellow w3-center">
+            <h3>Javascript deactivated!</h3>
+            <p>Please turn Javascript on to send me an e-mail or to see an interactive map.</p>
+          </div>
+        </noscript>
+      </div>
+    <!-- End Contact Section -->
+    </div>
+
+      <!-- Footer -->
+    <footer class="w3-content w3-padding-64 w3-text-white w3-xlarge">
+      <p class="w3-medium w3-center">
+        &copy; Dylan Van Assche (2018)<br>
+      <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" id="css_logo"/><br>
+        Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a>
+
+      </p>
+    <!-- End footer -->
+    </footer>
+
+  <!-- END PAGE CONTENT -->
   </div>
 
-    <!-- Footer -->
-  <footer class="w3-content w3-padding-64 w3-text-white w3-xlarge">
-    <p class="w3-medium w3-center">
-      &copy; Dylan Van Assche (2018)<br>
-    <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" id="css_logo"/><br>
-      Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a>
-
-    </p>
-  <!-- End footer -->
-  </footer>
-
-<!-- END PAGE CONTENT -->
-</div>
-
-</body>
+  </body>
 </html>
