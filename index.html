@@ -176,17 +176,22 @@
       <h2 class="w3-text-white">Contact</h2>
       <hr class="w3-opacity">
 
+      <!-- LeafletJS map initialisation-->
       <script type="text/javascript">
-      function initialize() {
-        var layer = "watercolor";
-            var map = new L.Map(layer, {
-                center: new L.LatLng(50.9265, 4.4125), // Vilvoorde
-                zoom: 13
-            });
-            var marker = L.marker([50.9265, 4.4125]).addTo(map).bindTooltip("Vilvoorde", {permanent: true});
-            map.addLayer(new L.StamenTileLayer(layer, {
-                detectRetina: true
-            }));
+        function initialize() {
+          var layer = "watercolor";
+          var map = new L.Map(layer, {
+              center: new L.LatLng(50.9265, 4.4125), // Vilvoorde
+              zoom: 13
+          });
+          var marker = L.marker([50.9265, 4.4125])
+          marker.addTo(map)
+          marker.bindTooltip("Vilvoorde", {
+            permanent: true
+          });
+          map.addLayer(new L.StamenTileLayer(layer, {
+            detectRetina: true
+          }));
         }
       </script>
       <!--LeafletJS with Stamen Design uses the ID as the type of map (terrain, toner or watercolor)-->
