@@ -61,10 +61,13 @@ br {
   max-width: 350px;
 }
 
-#map {
-  display: none;
+.map {
   width: 100%;
-  min-height: 200px;
+  height: 20vh;
+}
+
+#watercolor {
+  display: none;
 }
 
 #email {
